@@ -14,5 +14,5 @@ def staircase(n,align='left')
 	end
 end
 
-staircase(15,'right')
 staircase(15,'left')
+staircase(15,'right')
