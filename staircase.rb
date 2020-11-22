@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/staircase/problem
+# Easy
+
 def staircase(n,align='left')
 	(1..n).each do |i|
 		if align == 'left'
@@ -10,7 +13,6 @@ def staircase(n,align='left')
 		end
 	end
 end
-
 
 staircase(15,'right')
 staircase(15,'left')
