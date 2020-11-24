@@ -1,4 +1,6 @@
+# https://www.hackerrank.com/challenges/minimum-distances/problem
 # Easy
+
 def minimum_distances(a)
 
   frequencies = {} # set up a hash to count frequencies of each digit
