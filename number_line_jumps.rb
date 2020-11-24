@@ -10,10 +10,10 @@ def kangaroo(x1, v1, x2, v2)
   rendezvous = 'NO'
   jumps = 0
 
-  # locations of each kangaroo and the initial gap between the two
+  # locations of each kangaroo and the most recent prior gap between the two
   loc1 = x1
   loc2 = x2
-  starting_gap = (loc1-loc2).abs
+  previous_gap = (loc1-loc2).abs
 
   # start an infinite loop that we'll break out of
   while true
@@ -26,11 +26,12 @@ def kangaroo(x1, v1, x2, v2)
       rendezvous = 'YES'
       break # break out of any further iterations
     end
-    if current_gap > starting_gap # the gap has widened so they'll never catch up
+    if current_gap > previous_gap # the gap has widened so they'll never catch up
       rendezvous = 'NO'
       break # break out of any further iterations
     end
-    # no break yet, keep going....
+    # no break yet, keep going but update the previous gap for the next iteration
+    previous_gap = current_gap
   end
   return rendezvous
 end
